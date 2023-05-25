@@ -1,29 +1,29 @@
 export default class Task {
-    constructor(name, date = 'No hay fecha') {
-        this.name = name;
-        this.date = date;
+    constructor(name, dueDate = 'No date') {
+      this.name = name
+      this.dueDate = dueDate
     }
-
+  
     setName(name) {
-        this.name = name;
+      this.name = name
     }
-
+  
     getName() {
-        return this.name;
+      return this.name
     }
-
-    setDate(date) {
-        this.date = date;
+  
+    setDate(dueDate) {
+      this.dueDate = dueDate
     }
-
+  
     getDate() {
-        return this.date;
+      return this.dueDate
     }
-
+  
     getDateFormatted() {
-        const day = this.date.split('/')[0];
-        const month = this.date.split('/')[1];
-        const year = this.date.split('/')[2];
-        return `${day}/${month}/${year}`;
+      const day = this.dueDate.split('/')[0]
+      const month = this.dueDate.split('/')[1]
+      const year = this.dueDate.split('/')[2]
+      return `${month}/${day}/${year}`
     }
 }
